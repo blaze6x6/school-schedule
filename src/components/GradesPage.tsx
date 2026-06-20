@@ -3,7 +3,7 @@ import * as api from '../api';
 import { User, Student, SchoolClass, Subject, Grade } from '../types';
 import { Plus, Trash2, Edit2, Save, X, Award, BookOpen } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
-import { en } from 'date-fns/locale';
+import { enUS } from 'date-fns/locale';
 const GRADE_COLORS: Record<number, string> = {
   5: '#10B981',
   4: '#3B82F6',
