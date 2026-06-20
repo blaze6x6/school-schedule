@@ -4,7 +4,7 @@ import { useMultipleAsync } from '../hooks/useAsync';
 import { DayEvent, SchoolClass, Recurrence } from '../types';
 import { Plus, Trash2, Edit2, Save, X, CalendarCheck, Clock, Repeat } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
-import { sl } from 'date-fns/locale';
+import { en } from 'date-fns/locale';
 
 const EVENT_COLORS = [
   { name: 'Red', value: '#EF4444' },
@@ -322,7 +322,7 @@ export default function EventsPage() {
                           <div className="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
                             <span>
                               {event.recurrence === 'none'
-                                ? format(parseISO(event.date), 'EEEE, d. MMMM yyyy', { locale: sl })
+                                ? format(parseISO(event.date), 'EEEE, d. MMMM yyyy', { locale: en })
                                 : `Od ${format(parseISO(event.date), 'd. M. yyyy')}`
                               }
                             </span>
