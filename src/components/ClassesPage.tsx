@@ -150,7 +150,7 @@ export default function ClassesPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-800 text-lg">{c.name}</p>
-                      <p className="text-sm text-gray-500">{studentsCount(c.id)} učencev</p>
+                      <p className="text-sm text-gray-500">{studentsCount(c.id)} student(s)</p>
                     </div>
                   </div>
                   <div className="flex gap-1">
