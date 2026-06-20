@@ -31,7 +31,7 @@ router.get('/student/:studentId', async (req: AuthRequest, res) => {
       content: string;
       created_at: Date;
     }>(
-      SELECT id, student_id, note_date, content, created_at FROM student_notes WHERE student_id = $1 ORDER BY note_date DESC, created_at DESC',
+      'SELECT id, student_id, note_date, content, created_at FROM student_notes WHERE student_id = $1 ORDER BY note_date DESC, created_at DESC',
       [studentId]
     );
 
