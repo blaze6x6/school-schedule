@@ -5,7 +5,7 @@ import { useMultipleAsync } from '../hooks/useAsync';
 import { GraduationCap, Calendar, Clock, StickyNote, ChevronDown, ChevronUp } from 'lucide-react';
 import ScheduleView from './ScheduleView';
 import { format } from 'date-fns';
-import { sl } from 'date-fns/locale';
+import { en } from 'date-fns/locale';
 
 interface Props {
   user: User;
