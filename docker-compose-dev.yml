@@ -1,0 +1,73 @@
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:16-alpine
+    container_name: school-schedule-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: school_schedule
+      POSTGRES_USER: school_admin
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-SchoolSchedule2025!}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U school_admin -d school_schedule"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Frontend (Nginx serving static build)
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: school-schedule
+    restart: unless-stopped
+    ports:
+      - "8800:80"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Backend API (Express.js)
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: school-schedule-api
+    restart: unless-stopped
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_NAME: school_schedule
+      DB_USER: school_admin
+      DB_PASSWORD: ${DB_PASSWORD:-SchoolSchedule2025!}
+      JWT_SECRET: ${JWT_SECRET:-school-schedule-jwt-secret-change-me}
+      PORT: "3001"
+    ports:
+      - "3001:3001"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://0.0.0.0:3001/api/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Adminer - Database management UI (optional, for development)
+#  adminer:
+#    image: adminer:latest
+#    container_name: school-schedule-adminer
+#    restart: unless-stopped
+#    ports:
+#      - "8081:8080"
+#    depends_on:
+#      - db
+
+volumes:
+  postgres_data:
+    driver: local
