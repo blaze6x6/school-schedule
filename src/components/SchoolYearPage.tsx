@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import * as api from '../api';
 import { CalendarDays, Save, RotateCcw } from 'lucide-react';
 import { format, parseISO, differenceInDays, differenceInWeeks } from 'date-fns';
-import { en } from 'date-fns/locale';
+import { enUS } from 'date-fns/locale';
 
 export default function SchoolYearPage() {
   const [startDate, setStartDate] = useState('');
@@ -101,11 +101,11 @@ export default function SchoolYearPage() {
             </p>
             <p className="text-sm text-blue-700 mt-1">
               <span className="font-semibold">From:</span>{' '}
-              {format(parseISO(startDate), 'd. MMMM yyyy', { locale: en })}
+              {format(parseISO(startDate), 'd. MMMM yyyy', { locale: enUS })}
             </p>
             <p className="text-sm text-blue-700">
               <span className="font-semibold">To:</span>{' '}
-              {format(parseISO(endDate), 'd. MMMM yyyy', { locale: en })}
+              {format(parseISO(endDate), 'd. MMMM yyyy', { locale: enUS })}
             </p>
           </div>
         )}
