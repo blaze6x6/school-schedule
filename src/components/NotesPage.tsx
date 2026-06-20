@@ -3,7 +3,7 @@ import * as api from '../api';
 import { Student, StudentNote, SchoolClass } from '../types';
 import { Plus, Trash2, Edit2, Save, X, StickyNote, User } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
-import { sl } from 'date-fns/locale';
+import { en } from 'date-fns/locale';
 
 export default function NotesPage() {
   const [students, setStudents] = useState<Student[]>([]);
@@ -31,7 +31,7 @@ export default function NotesPage() {
 
   useEffect(() => {
     if (selectedStudentId) {
-      setNotesLoading(true);
+      setNoteoading(true);
       api.getNotesForStudent(selectedStudentId)
         .then(setNotes)
         .finally(() => setNotesLoading(false));
@@ -228,7 +228,7 @@ export default function NotesPage() {
                             </div>
                             <div>
                               <p className="text-sm text-gray-500 mb-1">
-                                {format(parseISO(note.date), 'EEEE, d. MMMM yyyy', { locale: sl })}
+                                {format(parseISO(note.date), 'EEEE, d. MMMM yyyy', { locale: en })}
                               </p>
                               <p className="text-gray-800 whitespace-pre-wrap">{note.content}</p>
                             </div>
