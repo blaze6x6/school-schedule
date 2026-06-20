@@ -4,7 +4,7 @@ import { useMultipleAsync } from '../hooks/useAsync';
 import { DayEvent, SchoolClass, Recurrence } from '../types';
 import { Plus, Trash2, Edit2, Save, X, CalendarCheck, Clock, Repeat } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
-import { en } from 'date-fns/locale';
+import { enUS } from 'date-fns/locale';
 
 const EVENT_COLORS = [
   { name: 'Red', value: '#EF4444' },
