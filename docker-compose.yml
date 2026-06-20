@@ -39,7 +39,7 @@ services:
       DB_HOST: db
       DB_PORT: "5432"
       DB_NAME: school_schedule
-      DB_USER: School_admin
+      DB_USER: school_admin
       DB_PASSWORD: ${DB_PASSWORD:-SchoolSchedule2025!}
       JWT_SECRET: ${JWT_SECRET:-school-schedule-jwt-secret-change-me}
       PORT: "3001"
