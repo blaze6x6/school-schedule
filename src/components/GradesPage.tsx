@@ -3,7 +3,7 @@ import * as api from '../api';
 import { User, Student, SchoolClass, Subject, Grade } from '../types';
 import { Plus, Trash2, Edit2, Save, X, Award, BookOpen } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
-import { sl } from 'date-fns/locale';
+import { en } from 'date-fns/locale';
 const GRADE_COLORS: Record<number, string> = {
   5: '#10B981',
   4: '#3B82F6',
@@ -354,7 +354,7 @@ export default function GradesPage({ user }: { user: User }) {
                               </span>
                             </td>
                             <td className="px-4 py-3 text-sm text-gray-600">
-                              {format(parseISO(g.date), 'd. MMMM yyyy', { locale: sl })}
+                              {format(parseISO(g.date), 'd. MMMM yyyy', { locale: en })}
                             </td>
                             <td className="px-4 py-3 text-sm text-gray-500">
                               {g.note || <span className="text-gray-300">—</span>}
