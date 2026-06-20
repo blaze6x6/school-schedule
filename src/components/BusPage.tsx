@@ -74,10 +74,10 @@ export default function BusPage() {
       <div className={`px-4 py-3 ${bgColor} border-b flex items-center gap-2`}>
         <span className="text-lg">{icon}</span>
         <h3 className={`text-sm font-semibold ${textColor}`}>{title}</h3>
-        <span className={`text-xs ${textColor} opacity-70`}>({rideList.length} {rideList.length === 1 ? 'vožnja' : rideList.length === 2 ? 'vožnji' : rideList.length <= 4 ? 'vožnje' : 'voženj'})</span>
+        <span className={`text-xs ${textColor} opacity-70`}>({rideList.length} {rideList.length === 1 ? 'ride' : rideList.length === 2 ? 'rides' : rideList.length <= 4 ? 'rides' : 'rides'})</span>
       </div>
       {rideList.length === 0 ? (
-        <div className="p-6 text-center text-gray-400 text-sm">Ni voženj.</div>
+        <div className="p-6 text-center text-gray-400 text-sm">No rides.</div>
       ) : (
         <table className="w-full">
           <thead className="bg-gray-50">
@@ -104,7 +104,7 @@ export default function BusPage() {
                         <input
                           value={form.label}
                           onChange={e => setForm({ ...form, label: e.target.value })}
-                          placeholder={`${idx + 1}. vožnja`}
+                          placeholder={`${idx + 1}. ride`}
                           className="px-2 py-1 border rounded w-28"
                         />
                       </td>
@@ -142,7 +142,7 @@ export default function BusPage() {
                   ) : (
                     <>
                       <td className="px-4 py-2 text-sm font-medium text-gray-800">
-                        {ride.label || `${idx + 1}. vožnja`}
+                        {ride.label || `${idx + 1}. ride`}
                       </td>
                       <td className="px-4 py-2 text-sm font-mono text-gray-700">{ride.departureTime}</td>
                       <td className="px-4 py-2 text-center">
