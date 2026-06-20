@@ -37,7 +37,7 @@ export default function Dashboard({ user }: Props) {
             <div className="flex items-center gap-2 text-gray-600">
               <Calendar className="w-5 h-5 text-blue-600" />
               <span className="font-medium">
-                {format(currentTime, 'EEEE, d. MMMM yyyy', { locale: sl })}
+                {format(currentTime, 'EEEE, d. MMMM yyyy', { locale: en })}
               </span>
             </div>
             <div className="flex items-center gap-2 text-gray-600 mt-1 justify-end">
