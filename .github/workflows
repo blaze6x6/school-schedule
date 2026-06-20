@@ -25,8 +25,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            blaze666/solski-urnik:${{ github.ref_name }}
-            blaze666/solski-urnik:latest
+            blaze666/school-schedule:${{ github.ref_name }}
+            blaze666/school-schedule:latest
             
       - name: Build and push Backend
         uses: docker/build-push-action@v6
@@ -35,6 +35,6 @@ jobs:
           file: ./server/Dockerfile
           push: true
           tags: |
-            blaze666/solski-urnik-api:${{ github.ref_name }}
-            blaze666/solski-urnik-api:latest
+            blaze666/school-schedule-api:${{ github.ref_name }}
+            blaze666/school-schedule-api:latest
             
