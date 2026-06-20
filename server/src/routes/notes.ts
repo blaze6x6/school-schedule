@@ -54,7 +54,7 @@ router.post('/', adminMiddleware, async (req, res) => {
     const { studentId, date, content } = req.body;
 
     if (!studentId || !date || !content) {
-      return res.status(400).json({ error: tudent, date and content are required' });
+      return res.status(400).json({ error: student, date and content are required' });
     }
 
     const note = await queryOne<{
