@@ -3,7 +3,7 @@ import * as api from '../api';
 import { AppNotification } from '../types';
 import { Bell, Check, CheckCheck, Trash2, X, Info, AlertTriangle, CheckCircle } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
-import { sl } from 'date-fns/locale';
+import { en } from 'date-fns/locale';
 export default function NotificationBell() {
   const [open, setOpen] = useState(false);
   const [notifications, setNotifications] = useState<AppNotification[]>([]);
@@ -129,7 +129,7 @@ export default function NotificationBell() {
                       {n.message}
                     </p>
                     <p className="text-[10px] text-gray-400 mt-0.5">
-                      {format(parseISO(n.createdAt), 'd. MMM yyyy, HH:mm', { locale: sl })}
+                      {format(parseISO(n.createdAt), 'd. MMM yyyy, HH:mm', { locale: en })}
                     </p>
                   </div>
                   <div className="flex gap-0.5 shrink-0">
