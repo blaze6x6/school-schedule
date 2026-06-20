@@ -47,7 +47,7 @@ const adminMenuItems: { page: Page; label: string; icon: React.ReactNode }[] = [
 ];
 
 const parentMenuItems: { page: Page; label: string; icon: React.ReactNode }[] = [
-  { page: 'dashboard', label: 'Children's schedule', icon: <Calendar className="w-5 h-5" /> },
+  { page: 'dashboard', label: 'Children schedule', icon: <Calendar className="w-5 h-5" /> },
   { page: 'grades', label: 'Grades', icon: <Award className="w-5 h-5" /> },
   { page: 'bus', label: 'Timetable', icon: <Bus className="w-5 h-5" /> },
   { page: 'email-settings', label: 'Email notifications', icon: <Mail className="w-5 h-5" /> },
