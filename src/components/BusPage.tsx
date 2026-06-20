@@ -238,8 +238,8 @@ export default function BusPage() {
         </div>
       )}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {renderRideTable(toSchool, 'V šolo', '🏫', 'bg-blue-50', 'text-blue-800')}
-        {renderRideTable(fromSchool, 'Iz šole', '🏠', 'bg-green-50', 'text-green-800')}
+        {renderRideTable(toSchool, 'To school', '🏫', 'bg-blue-50', 'text-blue-800')}
+        {renderRideTable(fromSchool, 'From school', '🏠', 'bg-green-50', 'text-green-800')}
       </div>
     </div>
   );
