@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS smtp_settings (
     secure BOOLEAN NOT NULL DEFAULT false,
     smtp_user VARCHAR(255) NOT NULL DEFAULT '',
     smtp_password VARCHAR(255) NOT NULL DEFAULT '',
-    from_name VARCHAR(255) NOT NULL DEFAULT 'Šolski Urnik',
+    from_name VARCHAR(255) NOT NULL DEFAULT 'School Schedule',
     from_email VARCHAR(255) NOT NULL DEFAULT '',
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
@@ -181,7 +181,7 @@ CREATE INDEX IF NOT EXISTS idx_student_notes_date ON student_notes(note_date);
 -- Insert default admin user
 -- Password will be properly hashed by the API server on first startup (seed.ts)
 INSERT INTO users (username, password_hash, full_name, role)
-VALUES ('admin', 'NEEDS_REHASH', 'Administrator', 'admin')
+VALUES ('admin', 'NEEDS_REHASH', 'Admin', 'admin')
 ON CONFLICT (username) DO NOTHING;
 
 -- Insert default school year
@@ -191,29 +191,29 @@ ON CONFLICT (id) DO NOTHING;
 
 -- Insert default periods (school hours) - sorted by start_time automatically
 INSERT INTO periods (name, start_time, end_time, is_break) VALUES
-    ('Predura', '07:30', '08:15', FALSE),
-    ('1. ura', '08:20', '09:05', FALSE),
-    ('2. ura', '09:10', '09:55', FALSE),
-    ('Odmor', '09:55', '10:15', TRUE),
-    ('3. ura', '10:15', '11:00', FALSE),
-    ('4. ura', '11:05', '11:50', FALSE),
-    ('5. ura', '11:55', '12:40', FALSE),
-    ('6. ura', '12:45', '13:30', FALSE),
-    ('7. ura', '13:35', '14:20', FALSE)
+    ('1. period', '07:30', '08:15', FALSE),
+    ('2. period', '08:20', '09:05', FALSE),
+    ('3. period', '09:10', '09:55', FALSE),
+    ('Break', '09:55', '10:15', TRUE),
+    ('4. period', '10:15', '11:00', FALSE),
+    ('5. period', '11:05', '11:50', FALSE),
+    ('6. period', '11:55', '12:40', FALSE),
+    ('7. period', '12:45', '13:30', FALSE),
+    ('8. period', '13:35', '14:20', FALSE)
 ON CONFLICT DO NOTHING;
 
 -- Insert default subjects
 INSERT INTO subjects (name, short_name, color) VALUES
-    ('Matematika', 'MAT', '#3B82F6'),
-    ('Slovenščina', 'SLO', '#EF4444'),
-    ('Angleščina', 'ANG', '#8B5CF6'),
-    ('Naravoslovje', 'NAR', '#10B981'),
-    ('Družba', 'DRU', '#F59E0B'),
-    ('Šport', 'ŠPO', '#EC4899'),
-    ('Likovna umetnost', 'LUM', '#F97316'),
-    ('Glasbena umetnost', 'GUM', '#06B6D4'),
-    ('Tehnika in tehnologija', 'TIT', '#6366F1'),
-    ('Gospodinjstvo', 'GOS', '#84CC16')
+    ('Mathematics', 'MAT', '#3B82F6'),
+    ('History', 'HIS', '#EF4444'),
+    ('English', 'ENG', '#8B5CF6'),
+    ('Natural sciences', 'NTS', '#10B981'),
+    ('Society', 'SOC', '#F59E0B'),
+    ('Sport', 'SPO', '#EC4899'),
+    ('Fine arts', 'FNA', '#F97316'),
+    ('Musical art', 'MSC', '#06B6D4'),
+    ('Technique and technology', 'TST', '#6366F1'),
+    ('Household', 'HSH', '#84CC16')
 ON CONFLICT DO NOTHING;
 
 -- Insert default classes
