@@ -4,24 +4,24 @@ A school schedule management system with Docker support, Express.js API backend,
 
 ## ✨ Features
 
-- ✅ Login Form — Login with username and password (JWT authentication)
-- ✅ Admin Account — Created upon installation (admin / admin123). Delete the default admin account after creating your own/a new one!!!
-- ✅ User Management — Create and delete accounts (admin, parent)
-- ✅ Student Management — Add, edit, delete
-- ✅ Subject Management — Add, edit, delete with colors
-- ✅ Class Management — Create and delete classes
-- ✅ Weekly Schedule — Dated calendar with weeks
-- ✅ School Year — Define time ranges
-- ✅ School Periods — Flexible time ranges with breaks
-- ✅ Timed Events — Scheduleable events (e.g., tests, sports day, etc.) with recurrence (daily, weekly, monthly)
-- ✅ Parents & Children — Linking and unlinking
-- ✅ Parent Name Change — Edit names on the parents page
-- ✅ Parent as Admin — Parent roles can also be admin
-- ✅ Schedule Display — Upon parent login, displays children's schedules
-- ✅ 📝 Student Notes — Notes with student details by date
-- ✅ 🌅 Afternoon Schedule — Manage afternoon activities by class/student
-- ✅ 🚌 Bus Rides — Display bus rides to and from school
-- ✅ Email Notifications — Toggle email notifications for added events, announcements, and afternoon activities
+- ✅ **Login Form** — Login with username and password (JWT authentication)
+- ✅ **Admin Account** — Created upon installation (admin / admin123). Delete the default admin account after creating your own/a new one!!!
+- ✅ **User Management** — Create and delete accounts (admin, parent)
+- ✅ **Student Management** — Add, edit, delete
+- ✅ **Subject Management** — Add, edit, delete with colors
+- ✅ **Class Management** — Create and delete classes
+- ✅ **Weekly Schedule** — Dated calendar with weeks
+- ✅ **School Year** — Define time ranges
+- ✅ **School Periods** — Flexible time ranges with breaks
+- ✅ **Timed Events** — Scheduleable events (e.g., tests, sports day, etc.) with recurrence (daily, weekly, monthly)
+- ✅ **Parents & Children** — Linking and unlinking
+- ✅ **Parent Name Change** — Edit names on the parents page
+- ✅ **Parent as Admin** — Parent roles can also be admin
+- ✅ **Schedule Display** — Upon parent login, displays children's schedules
+- ✅ 📝 **Student Notes** — Notes with student details by date
+- ✅ 🌅 **Afternoon Schedule** — Manage afternoon activities by class/student
+- ✅ 🚌 **Bus Rides** — Display bus rides to and from school
+- ✅ **Email Notifications** — Toggle email notifications for added events, announcements, and afternoon activities
 - ✅ **Schedule export to PDF** — useful for printing
 - ✅ **Grades** — add a grade to the selected student for the selected subject, grade type (written/oral)
 - ✅ **In-app notifications** — individual notifications and changes visible in the app
