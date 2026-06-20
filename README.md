@@ -23,6 +23,8 @@ A school schedule management system with Docker support, Express.js API backend,
 - ✅ 🚌 Bus Rides — Display bus rides to and from school
 - ✅ Email Notifications — Toggle email notifications for added events, announcements, and afternoon activities
 - ✅ **Schedule export to PDF** — useful for printing
+- ✅ **Grades** — add a grade to the selected student for the selected subject, grade type (written/oral)
+- ✅ **In-app notifications** — individual notifications and changes visible in the app
 
 ## 🏗️ Architecture
 
