@@ -2,7 +2,7 @@ import { useMemo, useState, useEffect, useRef, useCallback } from 'react';
 import * as api from '../api';
 import { ScheduleEntry, Period, Subject, DayEvent, AfternoonEntry } from '../types';
 import { format, startOfWeek, addDays, isWithinInterval, parseISO, addWeeks, subWeeks } from 'date-fns';
-import { sl } from 'date-fns/locale';
+import { en } from 'date-fns/locale';
 import { ChevronLeft, ChevronRight, Calendar, Star, Coffee, Umbrella, Type, FileDown } from 'lucide-react';
 import { toPng } from 'html-to-image';
 import { jsPDF } from 'jspdf';
@@ -195,7 +195,7 @@ export default function ScheduleView({ classId, className, title }: Props) {
         <div className="flex items-center gap-2 flex-wrap justify-center">
           <Calendar className="w-5 h-5 text-blue-600" />
           <span className="font-semibold text-gray-800">
-            {format(weekStart, 'd. MMMM', { locale: sl })} – {format(addDays(weekStart, 4), 'd. MMMM yyyy', { locale: sl })}
+            {format(weekStart, 'd. MMMM', { locale: en })} – {format(addDays(weekStart, 4), 'd. MMMM yyyy', { locale: en })}
           </span>
           {!isWeekInSchoolYear && (
             <span className="px-2 py-0.5 bg-orange-100 text-orange-700 text-xs font-medium rounded-full flex items-center gap-1">
