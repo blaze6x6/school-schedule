@@ -20,7 +20,7 @@ router.get('/student/:studentId', async (req: AuthRequest, res) => {
         [req.user!.userId, studentId]
       );
       if (!link) {
-        return res.status(403).json({ error: 'You do not have access to this child's notes.' });
+        return res.status(403).json({ error: 'You do not have access to this child notes.' });
       }
     }
 
@@ -31,7 +31,7 @@ router.get('/student/:studentId', async (req: AuthRequest, res) => {
       content: string;
       created_at: Date;
     }>(
-      'SELECT id, student_id, note_date, content, created_at FROM student_notes WHERE student_id = $1 ORDER BY note_date DESC, created_at DESC',
+      ELECT id, student_id, note_date, content, created_at FROM student_notes WHERE student_id = $1 ORDER BY note_date DESC, created_at DESC',
       [studentId]
     );
 
@@ -54,7 +54,7 @@ router.post('/', adminMiddleware, async (req, res) => {
     const { studentId, date, content } = req.body;
 
     if (!studentId || !date || !content) {
-      return res.status(400).json({ error: 'Student, date and content are required' });
+      return res.status(400).json({ error: tudent, date and content are required' });
     }
 
     const note = await queryOne<{
