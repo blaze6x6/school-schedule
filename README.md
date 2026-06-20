@@ -49,7 +49,7 @@ A school schedule management system with Docker support, Express.js API backend,
 
 ```bash
 # Clone the repository
-git clone https://github.com/blaze666/school-schedule
+git clone https://github.com/blaze6x6/school-schedule
 cd solski-urnik
 
 # Copy the .env file
