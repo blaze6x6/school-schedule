@@ -322,7 +322,7 @@ export default function EventsPage() {
                           <div className="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
                             <span>
                               {event.recurrence === 'none'
-                                ? format(parseISO(event.date), 'EEEE, d. MMMM yyyy', { locale: en })
+                                ? format(parseISO(event.date), 'EEEE, d. MMMM yyyy', { locale: enUS })
                                 : `Od ${format(parseISO(event.date), 'd. M. yyyy')}`
                               }
                             </span>
