@@ -31,7 +31,7 @@ export default function NotesPage() {
 
   useEffect(() => {
     if (selectedStudentId) {
-      setNoteoading(true);
+      setNotesLoading(true);
       api.getNotesForStudent(selectedStudentId)
         .then(setNotes)
         .finally(() => setNotesLoading(false));
