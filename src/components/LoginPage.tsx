@@ -82,7 +82,7 @@ export default function LoginPage({ onLogin }: Props) {
             ) : (
               <>
                 <LogIn className="w-5 h-5" />
-                Prijava
+                Login
               </>
             )}
           </button>
