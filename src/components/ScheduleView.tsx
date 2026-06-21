@@ -236,7 +236,7 @@ export default function ScheduleView({ classId, className, title }: Props) {
             onClick={() => setCurrentDate(new Date())}
             className="px-3 py-1.5 text-sm bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition font-medium"
           >
-            Danes
+            Today
           </button>
           <button
             onClick={() => setCurrentDate(addWeeks(currentDate, 1))}
