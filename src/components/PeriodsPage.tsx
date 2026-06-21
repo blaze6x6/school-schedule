@@ -222,7 +222,7 @@ export default function PeriodsPage() {
                             ? 'bg-amber-100 text-amber-700' 
                             : 'bg-blue-100 text-blue-700'
                         }`}>
-                          {p.isBreak ? 'Odmor' : 'Ura'}
+                          {p.isBreak ? 'Break' : 'Period'}
                         </span>
                       )}
                     </td>
