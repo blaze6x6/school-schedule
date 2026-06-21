@@ -82,11 +82,11 @@ export default function BusPage() {
         <table className="w-full">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-600">Oznaka</th>
-              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-600">Odhod</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-600">Tag</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-600">Departure</th>
               <th className="px-4 py-2 text-center text-sm font-semibold text-gray-400"></th>
-              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-600">Prihod</th>
-              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-600">Trajanje</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-600">Arival</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-600">Duration</th>
               <th className="px-4 py-2 text-right text-sm font-semibold text-gray-600 w-20"></th>
             </tr>
           </thead>
