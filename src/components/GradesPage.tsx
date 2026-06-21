@@ -354,7 +354,7 @@ export default function GradesPage({ user }: { user: User }) {
                               </span>
                             </td>
                             <td className="px-4 py-3 text-sm text-gray-600">
-                              {format(parseISO(g.date), 'd. MMMM yyyy', { locale: en })}
+                              {format(parseISO(g.date), 'd. MMMM yyyy', { locale: enUS })}
                             </td>
                             <td className="px-4 py-3 text-sm text-gray-500">
                               {g.note || <span className="text-gray-300">—</span>}
