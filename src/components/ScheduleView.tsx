@@ -262,7 +262,7 @@ export default function ScheduleView({ classId, className, title }: Props) {
                 <thead>
                   <tr className="bg-blue-50">
                     <th className="p-3 text-left text-sm font-semibold text-gray-600 w-28 border-b border-r border-blue-100">
-                      Ura
+                      Period
                     </th>
                     {weekDates.map((date, i) => {
                       const isToday = format(date, 'yyyy-MM-dd') === format(new Date(), 'yyyy-MM-dd');
@@ -411,7 +411,7 @@ export default function ScheduleView({ classId, className, title }: Props) {
                 <thead>
                   <tr className="bg-emerald-50/50">
                     <th className="p-3 text-left text-sm font-semibold text-gray-600 w-28 border-b border-r border-emerald-100">
-                      Čas
+                      Time
                     </th>
                     {weekDates.map((date, i) => {
                       const isToday = format(date, 'yyyy-MM-dd') === format(new Date(), 'yyyy-MM-dd');
