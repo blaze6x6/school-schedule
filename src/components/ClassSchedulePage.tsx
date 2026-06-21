@@ -181,7 +181,7 @@ export default function ClassSchedulePage() {
               <table className="w-full border-collapse min-w-[700px]">
                 <thead>
                   <tr className="bg-gray-50">
-                    <th className="p-3 text-left text-sm font-semibold text-gray-600 w-28 border-b border-r border-gray-200">Ura</th>
+                    <th className="p-3 text-left text-sm font-semibold text-gray-600 w-28 border-b border-r border-gray-200">Period</th>
                     {DAYS.map((day, i) => (
                       <th key={i} className="p-3 text-center text-sm font-semibold text-gray-700 border-b border-r border-gray-200">
                         {day}
